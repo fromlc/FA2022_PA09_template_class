@@ -61,26 +61,47 @@ inline void displayNodeData(LinkedList<T>& dataList);
 // entry point
 //------------------------------------------------------------------------------
 int main() {
-	// local LinkedList class instance declaration allocates stack memory
+
+//------------------------------------------------------------------------------
+// test int list
+//------------------------------------------------------------------------------
 	LinkedList<int> myIntList;
-	LinkedList<char> myCharList;
+	cout << "\nTEST INT LIST\n\n";
 
 	//--------------------------------------------------------------------------
 	// add some list items, on add each one becomes the new list head
 	//--------------------------------------------------------------------------
 	//testAdd(myIntList);
+
+	//--------------------------------------------------------------------------
+	// insert some list items in ascending sort order
+	//--------------------------------------------------------------------------
+	testInsert(myIntList);
+
+	//--------------------------------------------------------------------------
+	// delete list items
+	//--------------------------------------------------------------------------
+	testDelete(myIntList);
+
+//------------------------------------------------------------------------------
+// test char list
+//------------------------------------------------------------------------------
+	LinkedList<char> myCharList;
+	cout << "\nTEST CHAR LIST\n\n";
+
+	//--------------------------------------------------------------------------
+	// add some list items, on add each one becomes the new list head
+	//--------------------------------------------------------------------------
 	//testAdd(myCharList);
 
 	//--------------------------------------------------------------------------
 	// insert some list items in ascending sort order
 	//--------------------------------------------------------------------------
-	//testInsert(myIntList);
 	testInsert(myCharList);
 
 	//--------------------------------------------------------------------------
 	// delete list items
 	//--------------------------------------------------------------------------
-	//testDelete(myIntList);
 	testDelete(myCharList);
 
 	// END TEST release all node memory
