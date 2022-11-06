@@ -48,14 +48,14 @@ void testDelete(LinkedList<T>& myList);
 
 // delete node, show remaining list data
 template <typename T>
-bool _zapNshow(LinkedList<T>& list, T data);
+inline bool _zapNshow(LinkedList<T>& list, T data);
 
 // insert (true) or add (false) new node and show list data
 template <typename T>
-void _newNshow(LinkedList<T>& list, T data, bool insert = INS);
+inline void _newNshow(LinkedList<T>& list, T data, bool insert = INS);
 
 template <typename T>
-void displayNodeData(LinkedList<T>& dataList);
+inline void displayNodeData(LinkedList<T>& dataList);
 
 //------------------------------------------------------------------------------
 // entry point
@@ -145,7 +145,7 @@ void testDelete(LinkedList<T>& list) {
 // delete node, show remaining list data
 //------------------------------------------------------------------------------
 template <typename T>
-bool _zapNshow(LinkedList<T>& list, T data) {
+inline bool _zapNshow(LinkedList<T>& list, T data) {
 
 	cout << "\ndeleting " << data << "...";
 
@@ -169,7 +169,7 @@ bool _zapNshow(LinkedList<T>& list, T data) {
 // inserts node when insert is true, adds node otherwise
 //------------------------------------------------------------------------------
 template <typename T>
-void _newNshow(LinkedList<T>& list, T data, bool insert) {
+inline void _newNshow(LinkedList<T>& list, T data, bool insert) {
 
 	if (insert) {
 		cout << "\ninserting sorted " << data;
@@ -187,7 +187,7 @@ void _newNshow(LinkedList<T>& list, T data, bool insert) {
 // display each data item in the passed list
 //------------------------------------------------------------------------------
 template <typename T>
-void displayNodeData(LinkedList<T>& dataList) {
+inline void displayNodeData(LinkedList<T>& dataList) {
 	
 	//--------------------------------------------------------------------------
 	// _always check list status before walking the list!
